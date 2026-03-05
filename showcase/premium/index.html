@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NitroMod | Premium Showcase</title>
+    <link rel="icon" type="image/png" href="/images/NitroMod-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .premium-main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: clamp(2rem, 3vw, 3.5rem);
+            padding-top: 16vh;
+            padding-bottom: 10vh;
+        }
+
+        .premium-hero {
+            width: min(1120px, 100%);
+            padding: clamp(2.2rem, 4vw, 4rem);
+            border-color: rgba(180, 83, 224, 0.42);
+            box-shadow: 0 0 4rem rgba(180, 83, 224, 0.12);
+        }
+
+        .premium-hero h1 {
+            margin-bottom: 1rem;
+        }
+
+        .premium-hero p {
+            max-width: 75ch;
+        }
+
+        .premium-feature-shell {
+            width: min(1120px, 100%);
+            background: linear-gradient(160deg, rgba(28, 18, 36, 0.78), rgba(8, 8, 13, 0.8));
+            border: 1px solid rgba(180, 83, 224, 0.35);
+            border-radius: 2rem;
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            box-shadow: 0 1.2rem 3rem rgba(0, 0, 0, 0.5), 0 0 2.4rem rgba(180, 83, 224, 0.12);
+            padding: clamp(1.6rem, 3vw, 2.6rem);
+        }
+
+        .premium-feature-head {
+            margin-bottom: 1.6rem;
+        }
+
+        .premium-feature-head h2 {
+            margin: 0 0 0.75rem;
+            font-size: clamp(1.9rem, 3vw, 2.6rem);
+            line-height: 1.15;
+        }
+
+        .premium-feature-head p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: clamp(1rem, 1.1vw, 1.15rem);
+            line-height: 1.7;
+            max-width: 76ch;
+        }
+
+        .premium-feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .premium-feature-card {
+            background: linear-gradient(165deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015));
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 1.25rem;
+            padding: 1.25rem 1.1rem 1.1rem;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .premium-feature-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(210, 112, 255, 0.7);
+            box-shadow: 0 0.8rem 2rem rgba(180, 83, 224, 0.16);
+        }
+
+        .premium-feature-card h3 {
+            margin: 0 0 0.9rem;
+            font-size: 1.08rem;
+            color: #fff;
+        }
+
+        .premium-feature-card ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: grid;
+            gap: 0.55rem;
+        }
+
+        .premium-feature-card li {
+            color: var(--text-muted);
+            line-height: 1.5;
+            font-size: 0.96rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .premium-feature-card li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.55em;
+            width: 0.38rem;
+            height: 0.38rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f5a6ff, #73e9ff);
+            box-shadow: 0 0 10px rgba(180, 83, 224, 0.4);
+        }
+
+        @media (max-width: 720px) {
+            .premium-main {
+                padding-top: 18vh;
+            }
+
+            .premium-feature-shell {
+                padding: 1.25rem;
+                border-radius: 1.4rem;
+            }
+
+            .premium-feature-card {
+                padding: 1.05rem 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://kit.fontawesome.com/76155aeaae.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('body').prepend($('<div>').load('/assets/header.html'));
+        });
+    </script>
+
+    <div class="main-body premium-main">
+        <section class="page-shell premium-hero">
+            <p class="page-meta" style="color: #e5b3ff !important;">Premium Showcase</p>
+            <h1>See the Power of Premium</h1>
+            <p>Discover exclusive creator tier features: advanced cinematic shoots, exclusive monthly preset drops, ball protection, and boost overlays. Designed for professional creators.</p>
+            <div class="home-actions">
+                <a href="https://discord.gg/11k" class="download-btn" target="_blank" rel="noopener">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Purchase Now
+                </a>
+                <a href="/community" class="secondary-link">
+                    <span>Join Premium Creators</span>
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="premium-feature-shell">
+            <div class="premium-feature-head">
+                <h2>NitroMod Features</h2>
+                <p>NitroMod is a Rocket League mod framework with tools for inventory customization, UI personalization, and in-game overlays.</p>
+            </div>
+
+            <div class="premium-feature-grid">
+                <article class="premium-feature-card">
+                    <h3>1. Item Spawner</h3>
+                    <ul>
+                        <li>Spawn selected items and manual item IDs</li>
+                        <li>Bulk spawn support (Spawn X)</li>
+                        <li>Quick actions: Spawn Alpha Items, Spawn Hacker Items, Spawn All Item</li>
+                        <li>Optional quality settings, random quality, paint ID, series ID, and spawn animation</li>
+                    </ul>
+                </article>
+
+                <article class="premium-feature-card">
+                    <h3>2. Title Manager</h3>
+                    <ul>
+                        <li>Browse and load in-game titles</li>
+                        <li>Spawn selected title by ID</li>
+                        <li>Spawn all titles in one action</li>
+                        <li>Toggle title spawn animation</li>
+                        <li>Inventory resync/reset option</li>
+                    </ul>
+                </article>
+
+                <article class="premium-feature-card">
+                    <h3>3. Rank Changer</h3>
+                    <ul>
+                        <li>Change rank by playlist, including division and MMR</li>
+                        <li>Supports full rank range up to Supersonic Legend</li>
+                        <li>Automatically sets season reward level to max (10) on rank change</li>
+                        <li>Reset rank option</li>
+                    </ul>
+                </article>
+
+                <article class="premium-feature-card">
+                    <h3>4. Rocket Pass Editor</h3>
+                    <ul>
+                        <li>Edit Rocket Pass tier</li>
+                        <li>Toggle premium ownership flag</li>
+                        <li>Edit XP multiplier</li>
+                        <li>Apply, cache, and clear values</li>
+                    </ul>
+                </article>
+
+                <article class="premium-feature-card">
+                    <h3>5. Lobby UI Customization</h3>
+                    <ul>
+                        <li>Switch main menu backgrounds (multiple presets)</li>
+                        <li>Auto-apply background changes</li>
+                        <li>Reset to default background</li>
+                        <li>Premium Garage background apply option</li>
+                    </ul>
+                </article>
+
+                <article class="premium-feature-card">
+                    <h3>6. Fun / Modal Tools</h3>
+                    <ul>
+                        <li>Create custom modals (Fun, Ban, Warning)</li>
+                        <li>Custom title, body, buttons, and modal colors</li>
+                        <li>Ban citation list support</li>
+                        <li>Built-in welcome modal</li>
+                    </ul>
+                </article>
+
+                <article class="premium-feature-card">
+                    <h3>7. In-Game Overlay Modules</h3>
+                    <ul>
+                        <li>Car boost circle/text overlay</li>
+                        <li>Ball overlay markers</li>
+                        <li>Flip reset and jump-ready indicators</li>
+                        <li>Additional modules: boost pad timers, ball prediction, boost overlay bar, demo smoke remover, flip detector</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <small>&copy; 2025 NitroMod. Rocket League is a trademark of Psyonix LLC. No affiliation implied.</small>
+    </footer>
+
+    <canvas id="canvas" aria-hidden="true"></canvas>
+    <script src="/assets/background.js"></script>
+    <script src="/assets/counter.js"></script>
+</body>
+
+</html>
+
