@@ -11,29 +11,20 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <script src="https://kit.fontawesome.com/76155aeaae.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script>
-        $(function () {
-            $('body').prepend($('<div>').load('/assets/header.html'));
-        });
-    </script>
+    <script src="https://kit.fontawesome.com/76155aeaae.js" crossorigin="anonymous" defer></script>
+    <script src="/assets/main.js" defer></script>
 
     <div class="main-body">
-        <div class="home-shell">
-            <div class="home-copy">
-                <h1>NitroMod, the offline Rocket League sandbox</h1>
-                <p>Bring the polish of your favorite Rocket League mod site to NitroMod. Test cosmetics, plan screenshots, and create content in a private sandbox that mirrors the in-game experience—no account changes required.</p>
-                <div class="home-actions">
-                    <a href="/downloads" class="download-btn">
-                        <i class="fa-solid fa-download" aria-hidden="true"></i>
-                        Download NitroMod
+        <div class="home-shell reveal-up">
+            <div class="home-copy" style="max-width: 800px; text-align: center; margin: 0 auto; grid-column: 1 / -1;">
+                <h1 style="font-size: clamp(2.5rem, 4vw, 3.5rem);">NitroMod is shutting down</h1>
+                <p style="font-size: clamp(1.2rem, 1.5vw, 1.5rem); line-height: 1.6;">Bad news—NitroMod is shutting down for the time being. EAC is officially in the game, and I’m not gonna risk your accounts getting flagged. I’m open to collaborating with new developers who have experience with EAC if anyone wants to try and revive this safely, but until that happens, the project is done. Appreciate you all sticking by me.</p>
+                <div class="home-actions" style="justify-content: center; margin-top: 2rem;">
+                    <a href="https://discord.gg/11k" class="discord-cta" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-discord"></i>
+                        Join Discord
                     </a>
-                    <p id="download-notice">Over <counter target="500"></counter> downloads!</p>
                 </div>
-            </div>
-            <div class="home-visual">
-                <img src="/images/nitro-mod-titles.jpg" alt="NitroMod arena preview">
             </div>
         </div>
     </div>

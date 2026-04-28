@@ -3,37 +3,25 @@
         <div class="header-left">
             <p class="header-left-text">NitroMod</p>
         </div>
-        <nav class="tabbar" aria-label="Primary navigation">
-            <a href="/" class="tab-btn" data-page="index">Home</a>
-            <a href="/community" class="tab-btn" data-page="community">Community</a>
-            <a href="/downloads" class="tab-btn" data-page="downloads">Downloads</a>
-        </nav>
-        <div class="header-right">
-            <a href="https://discord.gg/11k" class="header-right-icon" target="_blank" rel="noopener" aria-label="Join the NitroMod Discord">
-                <i class="fa-brands fa-discord"></i>
-            </a>
-            <a href="https://github.com/dxkku" class="header-right-icon" target="_blank" rel="noopener" aria-label="NitroMod on GitHub">
-                <i class="fa-brands fa-github"></i>
-            </a>
+        
+        <!-- Hamburger Menu Toggle (Mobile) -->
+        <div class="menu-toggle" aria-label="Toggle Navigation">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="header-nav-wrapper">
+            <nav class="tabbar" aria-label="Primary navigation">
+                <a href="/" class="tab-btn" data-page="index">Home</a>
+                <a href="/news" class="tab-btn" data-page="news">News</a>
+            </nav>
+            <div class="header-right">
+                <a href="https://discord.gg/11k" class="header-right-icon" target="_blank" rel="noopener" aria-label="Join the NitroMod Discord">
+                    <i class="fa-brands fa-discord"></i>
+                </a>
+                <a href="https://github.com/dxkku" class="header-right-icon" target="_blank" rel="noopener" aria-label="NitroMod on GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
         </div>
     </div>
 </div>
-<script>
-    (function() {
-        const applyActiveState = () => {
-            const path = window.location.pathname.split('/').pop();
-            const currentPage = (path && path.replace('.html', '')) || 'index';
-            document.querySelectorAll('.tab-btn').forEach(link => {
-                if (link.dataset.page === currentPage) {
-                    link.id = 'selected-tab';
-                }
-            });
-        };
-
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', applyActiveState);
-        } else {
-            applyActiveState();
-        }
-    })();
-</script>
